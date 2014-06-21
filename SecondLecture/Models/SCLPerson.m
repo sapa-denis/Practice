@@ -8,17 +8,55 @@
 
 #import "SCLPerson.h"
 
+static NSString *const kFirstName = @"firstName";
+static NSString *const kLastName = @"lastName";
+static NSString *const kBirthDate = @"birthDate";
+
+@interface SCLPerson ()
+
+@property (nonatomic, strong) NSMutableDictionary *modelDictionnary;
+
+@end
+
 @implementation SCLPerson
 
 - (id)init
 {
 	self = [super init];
 	if (self) {
-		_firstName = @"First";
-		_lastName = @"Last";
-		_birthDate = [NSDate date];
+		_modelDictionnary = [NSMutableDictionary new];
 	}
 	return self;
+}
+
+- (void)setFirstName:(NSString *)firstName
+{
+	[self.modelDictionnary setObject:firstName forKey:kFirstName];
+}
+
+- (NSString *)firstName
+{
+	return [self.modelDictionnary objectForKey:kFirstName];
+}
+
+- (void)setLastName:(NSString *)lastName
+{
+	[self.modelDictionnary setObject:lastName forKey:kLastName];
+}
+
+- (NSString *)lastName
+{
+	return [self.modelDictionnary objectForKey:kLastName];
+}
+
+- (void)setBirthDate:(NSDate *)birthDate
+{
+	[self.modelDictionnary setObject:birthDate forKey:kBirthDate];
+}
+
+- (NSDate *)birthDate
+{
+	return [self.modelDictionnary objectForKey:kBirthDate];
 }
 
 - (NSString *)description
