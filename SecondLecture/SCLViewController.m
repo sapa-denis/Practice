@@ -38,6 +38,10 @@
 
 - (IBAction)displayPerson:(id)sender
 {
+	if (!self.person.birthDate) {
+		self.person.birthDate = self.birthDayPicker.date;
+	}
+	
 	self.descriptionLabel.text = self.person.description;
 	self.descriptionLabel.numberOfLines = 0;
 	[self.descriptionLabel sizeToFit];
