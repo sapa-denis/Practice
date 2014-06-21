@@ -18,8 +18,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *descriptionLabel;
 @property (weak, nonatomic) IBOutlet UIButton *saveButton;
 
-@property (nonatomic, strong) SCLPerson *person;
-
 @property (nonatomic, strong) NSMutableArray *personsArray;
 
 @property (nonatomic, strong) SCLPersonDescriptionFormatter *personFormatter;
@@ -32,7 +30,6 @@
 {
 	self = [super initWithCoder:aDecoder];
 	if (self) {
-		_person = [SCLPerson new];
 		_personFormatter = [SCLPersonDescriptionFormatter new];
 		_personsArray = [NSMutableArray array];
 	}
@@ -46,13 +43,12 @@
 
 - (IBAction)displayPerson:(id)sender
 {
-	[self.personsArray addObject:self.person];
+	SCLPerson *person = [self readPersonsInfo];
+	[self.personsArray addObject:person];
 	
-	if (!self.person.birthDate) {
-		self.person.birthDate = self.birthDayPicker.date;
-	}
+	NSString *description = [NSString stringWithFormat:@"%ul\n %@", [self.personsArray count], [self.personFormatter descriptionStringFromPerson:person]];
 	
-	self.descriptionLabel.text = [self lastPersonDescription];
+	self.descriptionLabel.text = description;
 	self.descriptionLabel.numberOfLines = 0;
 	[self.descriptionLabel sizeToFit];
 }
@@ -64,13 +60,15 @@
 	return [self.personFormatter descriptionStringFromPerson:person];
 }
 
--(void)textFieldDidEndEditing:(UITextField *)textField
+- (SCLPerson *)readPersonsInfo
 {
-	if ([textField isEqual:self.firstNameTextField]) {
-		self.person.firstName = self.firstNameTextField.text;
-	} else if ([textField isEqual:self.lastNameTextField]) {
-		self.person.lastName = self.lastNameTextField.text;
-	}
+	SCLPerson *person = [SCLPerson new];
+	
+	person.birthDate = self.birthDayPicker.date;
+	person.firstName = self.firstNameTextField.text;
+	person.lastName = self.lastNameTextField.text;
+	return person;
+
 }
 
 -(BOOL)textFieldShouldReturn:(UITextField *)textField
@@ -79,9 +77,5 @@
 	return YES;
 }
 
-- (IBAction)datePicked:(UIDatePicker *)sender
-{
-	self.person.birthDate = sender.date;
-}
 
 @end
