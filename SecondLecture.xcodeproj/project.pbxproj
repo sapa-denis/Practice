@@ -22,6 +22,7 @@
 		EAB9F290195093AA008141D3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAB9F26F195093A9008141D3 /* UIKit.framework */; };
 		EAB9F298195093AA008141D3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EAB9F296195093AA008141D3 /* InfoPlist.strings */; };
 		EAB9F29A195093AA008141D3 /* SecondLectureTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EAB9F299195093AA008141D3 /* SecondLectureTests.m */; };
+		EAB9F2A91950A651008141D3 /* SCLPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = EAB9F2A81950A651008141D3 /* SCLPerson.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,8 @@
 		EAB9F295195093AA008141D3 /* SecondLectureTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SecondLectureTests-Info.plist"; sourceTree = "<group>"; };
 		EAB9F297195093AA008141D3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		EAB9F299195093AA008141D3 /* SecondLectureTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondLectureTests.m; sourceTree = "<group>"; };
+		EAB9F2A71950A651008141D3 /* SCLPerson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCLPerson.h; sourceTree = "<group>"; };
+		EAB9F2A81950A651008141D3 /* SCLPerson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCLPerson.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +117,7 @@
 		EAB9F271195093A9008141D3 /* SecondLecture */ = {
 			isa = PBXGroup;
 			children = (
+				EAB9F2A61950A651008141D3 /* Models */,
 				EAB9F27A195093A9008141D3 /* SCLAppDelegate.h */,
 				EAB9F27B195093A9008141D3 /* SCLAppDelegate.m */,
 				EAB9F27D195093A9008141D3 /* Main_iPhone.storyboard */,
@@ -153,6 +157,15 @@
 				EAB9F296195093AA008141D3 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EAB9F2A61950A651008141D3 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				EAB9F2A71950A651008141D3 /* SCLPerson.h */,
+				EAB9F2A81950A651008141D3 /* SCLPerson.m */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,6 +270,7 @@
 				EAB9F285195093A9008141D3 /* SCLViewController.m in Sources */,
 				EAB9F278195093A9008141D3 /* main.m in Sources */,
 				EAB9F27C195093A9008141D3 /* SCLAppDelegate.m in Sources */,
+				EAB9F2A91950A651008141D3 /* SCLPerson.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

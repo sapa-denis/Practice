@@ -7,23 +7,60 @@
 //
 
 #import "SCLViewController.h"
+#import "SCLPerson.h"
 
-@interface SCLViewController ()
+@interface SCLViewController () <UITextFieldDelegate>
 
+@property (weak, nonatomic) IBOutlet UITextField *firstNameTextField;
+@property (weak, nonatomic) IBOutlet UITextField *lastNameTextField;
+@property (weak, nonatomic) IBOutlet UIDatePicker *birthDayPicker;
+@property (weak, nonatomic) IBOutlet UILabel *descriptionLabel;
+@property (weak, nonatomic) IBOutlet UIButton *saveButton;
+
+@property (nonatomic, strong) SCLPerson *person;
 @end
 
 @implementation SCLViewController
 
+- (id)initWithCoder:(NSCoder *)aDecoder
+{
+	self = [super initWithCoder:aDecoder];
+	if (self) {
+		_person = [SCLPerson new];
+	}
+	return self;
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
 }
 
-- (void)didReceiveMemoryWarning
+- (IBAction)displayPerson:(id)sender
 {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+	self.descriptionLabel.text = self.person.description;
+	self.descriptionLabel.numberOfLines = 0;
+	[self.descriptionLabel sizeToFit];
+}
+
+-(void)textFieldDidEndEditing:(UITextField *)textField
+{
+	if ([textField isEqual:self.firstNameTextField]) {
+		self.person.firstName = self.firstNameTextField.text;
+	} else if ([textField isEqual:self.lastNameTextField]) {
+		self.person.lastName = self.lastNameTextField.text;
+	}
+}
+
+-(BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+	[textField resignFirstResponder];
+	return YES;
+}
+
+- (IBAction)datePicked:(UIDatePicker *)sender
+{
+	self.person.birthDate = sender.date;
 }
 
 @end
