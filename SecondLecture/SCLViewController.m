@@ -8,6 +8,7 @@
 
 #import "SCLViewController.h"
 #import "SCLPerson.h"
+#import "SCLPersonDescriptionFormatter.h"
 
 @interface SCLViewController () <UITextFieldDelegate>
 
@@ -18,6 +19,11 @@
 @property (weak, nonatomic) IBOutlet UIButton *saveButton;
 
 @property (nonatomic, strong) SCLPerson *person;
+
+@property (nonatomic, strong) NSMutableArray *personsArray;
+
+@property (nonatomic, strong) SCLPersonDescriptionFormatter *personFormatter;
+
 @end
 
 @implementation SCLViewController
@@ -27,6 +33,8 @@
 	self = [super initWithCoder:aDecoder];
 	if (self) {
 		_person = [SCLPerson new];
+		_personFormatter = [SCLPersonDescriptionFormatter new];
+		_personsArray = [NSMutableArray array];
 	}
 	return self;
 }
@@ -38,13 +46,22 @@
 
 - (IBAction)displayPerson:(id)sender
 {
+	[self.personsArray addObject:self.person];
+	
 	if (!self.person.birthDate) {
 		self.person.birthDate = self.birthDayPicker.date;
 	}
 	
-	self.descriptionLabel.text = self.person.description;
+	self.descriptionLabel.text = [self lastPersonDescription];
 	self.descriptionLabel.numberOfLines = 0;
 	[self.descriptionLabel sizeToFit];
+}
+
+- (NSString *)lastPersonDescription
+{
+	SCLPerson *person = [self.personsArray lastObject];
+	
+	return [self.personFormatter descriptionStringFromPerson:person];
 }
 
 -(void)textFieldDidEndEditing:(UITextField *)textField

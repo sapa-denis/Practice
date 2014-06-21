@@ -60,13 +60,8 @@ static NSString *const kBirthDate = @"birthDate";
 }
 
 - (NSString *)description
-{
-	NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-	
-	[formatter setTimeStyle:NSDateFormatterNoStyle];
-	[formatter setDateFormat:@"EEE, dd MMM YYYY"];
-	
-	NSString *personInfo = [NSString stringWithFormat:@"\n%@\n%@\n%@", self.firstName, self.lastName, [formatter stringFromDate:self.birthDate]];
+{	
+	NSString *personInfo = [NSString stringWithFormat:@"\n%@\n%@\n%@", self.firstName, self.lastName, self.birthDate];
 	
 	return [[super description] stringByAppendingString:personInfo];
 }
