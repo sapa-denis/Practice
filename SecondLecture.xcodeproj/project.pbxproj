@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		EA102331196597FC00C1ED11 /* SCLDataProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = EA102330196597FC00C1ED11 /* SCLDataProvider.m */; };
+		EA1023341965A9CE00C1ED11 /* SCLDataProvider+SCLFileUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = EA1023331965A9CE00C1ED11 /* SCLDataProvider+SCLFileUtils.m */; };
+		EA1023371965ADB800C1ED11 /* contacts.plist in Resources */ = {isa = PBXBuildFile; fileRef = EA1023361965ADB800C1ED11 /* contacts.plist */; };
 		EA2A0EB619643932007DE24F /* SCLModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EA2A0EB519643932007DE24F /* SCLModel.m */; };
 		EAB9F26C195093A9008141D3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAB9F26B195093A9008141D3 /* Foundation.framework */; };
 		EAB9F26E195093A9008141D3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAB9F26D195093A9008141D3 /* CoreGraphics.framework */; };
@@ -41,6 +43,10 @@
 /* Begin PBXFileReference section */
 		EA10232F196597FC00C1ED11 /* SCLDataProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCLDataProvider.h; sourceTree = "<group>"; };
 		EA102330196597FC00C1ED11 /* SCLDataProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCLDataProvider.m; sourceTree = "<group>"; };
+		EA1023321965A9CE00C1ED11 /* SCLDataProvider+SCLFileUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SCLDataProvider+SCLFileUtils.h"; sourceTree = "<group>"; };
+		EA1023331965A9CE00C1ED11 /* SCLDataProvider+SCLFileUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SCLDataProvider+SCLFileUtils.m"; sourceTree = "<group>"; };
+		EA1023351965AC3000C1ED11 /* SCLObservable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SCLObservable.h; sourceTree = "<group>"; };
+		EA1023361965ADB800C1ED11 /* contacts.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = contacts.plist; sourceTree = "<group>"; };
 		EA2A0EB419643932007DE24F /* SCLModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCLModel.h; sourceTree = "<group>"; };
 		EA2A0EB519643932007DE24F /* SCLModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCLModel.m; sourceTree = "<group>"; };
 		EAB9F268195093A9008141D3 /* SecondLecture.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SecondLecture.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -136,6 +142,7 @@
 				EAB9F286195093A9008141D3 /* Images.xcassets */,
 				EAB9F280195093A9008141D3 /* Main_iPad.storyboard */,
 				EAB9F27D195093A9008141D3 /* Main_iPhone.storyboard */,
+				EA1023361965ADB800C1ED11 /* contacts.plist */,
 				EAB9F272195093A9008141D3 /* Supporting Files */,
 			);
 			path = SecondLecture;
@@ -179,6 +186,9 @@
 				EA2A0EB519643932007DE24F /* SCLModel.m */,
 				EA10232F196597FC00C1ED11 /* SCLDataProvider.h */,
 				EA102330196597FC00C1ED11 /* SCLDataProvider.m */,
+				EA1023321965A9CE00C1ED11 /* SCLDataProvider+SCLFileUtils.h */,
+				EA1023331965A9CE00C1ED11 /* SCLDataProvider+SCLFileUtils.m */,
+				EA1023351965AC3000C1ED11 /* SCLObservable.h */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -264,6 +274,7 @@
 				EAB9F287195093A9008141D3 /* Images.xcassets in Resources */,
 				EAB9F27F195093A9008141D3 /* Main_iPhone.storyboard in Resources */,
 				EAB9F276195093A9008141D3 /* InfoPlist.strings in Resources */,
+				EA1023371965ADB800C1ED11 /* contacts.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,6 +299,7 @@
 				EAB9F278195093A9008141D3 /* main.m in Sources */,
 				EA102331196597FC00C1ED11 /* SCLDataProvider.m in Sources */,
 				EAB9F27C195093A9008141D3 /* SCLAppDelegate.m in Sources */,
+				EA1023341965A9CE00C1ED11 /* SCLDataProvider+SCLFileUtils.m in Sources */,
 				EAB9F2A91950A651008141D3 /* SCLPerson.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
