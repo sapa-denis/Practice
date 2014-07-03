@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EA2A0EB619643932007DE24F /* SCLModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EA2A0EB519643932007DE24F /* SCLModel.m */; };
 		EAB9F26C195093A9008141D3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAB9F26B195093A9008141D3 /* Foundation.framework */; };
 		EAB9F26E195093A9008141D3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAB9F26D195093A9008141D3 /* CoreGraphics.framework */; };
 		EAB9F270195093A9008141D3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAB9F26F195093A9008141D3 /* UIKit.framework */; };
@@ -23,6 +24,7 @@
 		EAB9F298195093AA008141D3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EAB9F296195093AA008141D3 /* InfoPlist.strings */; };
 		EAB9F29A195093AA008141D3 /* SecondLectureTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EAB9F299195093AA008141D3 /* SecondLectureTests.m */; };
 		EAB9F2A91950A651008141D3 /* SCLPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = EAB9F2A81950A651008141D3 /* SCLPerson.m */; };
+		EAB9F2AC1955B2FC008141D3 /* SCLPersonDescriptionFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = EAB9F2AB1955B2FC008141D3 /* SCLPersonDescriptionFormatter.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EA2A0EB419643932007DE24F /* SCLModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCLModel.h; sourceTree = "<group>"; };
+		EA2A0EB519643932007DE24F /* SCLModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCLModel.m; sourceTree = "<group>"; };
 		EAB9F268195093A9008141D3 /* SecondLecture.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SecondLecture.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAB9F26B195093A9008141D3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		EAB9F26D195093A9008141D3 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -58,6 +62,8 @@
 		EAB9F299195093AA008141D3 /* SecondLectureTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondLectureTests.m; sourceTree = "<group>"; };
 		EAB9F2A71950A651008141D3 /* SCLPerson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCLPerson.h; sourceTree = "<group>"; };
 		EAB9F2A81950A651008141D3 /* SCLPerson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCLPerson.m; sourceTree = "<group>"; };
+		EAB9F2AA1955B2FC008141D3 /* SCLPersonDescriptionFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCLPersonDescriptionFormatter.h; sourceTree = "<group>"; };
+		EAB9F2AB1955B2FC008141D3 /* SCLPersonDescriptionFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCLPersonDescriptionFormatter.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,11 +126,13 @@
 				EAB9F2A61950A651008141D3 /* Models */,
 				EAB9F27A195093A9008141D3 /* SCLAppDelegate.h */,
 				EAB9F27B195093A9008141D3 /* SCLAppDelegate.m */,
-				EAB9F27D195093A9008141D3 /* Main_iPhone.storyboard */,
-				EAB9F280195093A9008141D3 /* Main_iPad.storyboard */,
+				EAB9F2AA1955B2FC008141D3 /* SCLPersonDescriptionFormatter.h */,
+				EAB9F2AB1955B2FC008141D3 /* SCLPersonDescriptionFormatter.m */,
 				EAB9F283195093A9008141D3 /* SCLViewController.h */,
 				EAB9F284195093A9008141D3 /* SCLViewController.m */,
 				EAB9F286195093A9008141D3 /* Images.xcassets */,
+				EAB9F280195093A9008141D3 /* Main_iPad.storyboard */,
+				EAB9F27D195093A9008141D3 /* Main_iPhone.storyboard */,
 				EAB9F272195093A9008141D3 /* Supporting Files */,
 			);
 			path = SecondLecture;
@@ -164,6 +172,8 @@
 			children = (
 				EAB9F2A71950A651008141D3 /* SCLPerson.h */,
 				EAB9F2A81950A651008141D3 /* SCLPerson.m */,
+				EA2A0EB419643932007DE24F /* SCLModel.h */,
+				EA2A0EB519643932007DE24F /* SCLModel.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -267,7 +277,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA2A0EB619643932007DE24F /* SCLModel.m in Sources */,
 				EAB9F285195093A9008141D3 /* SCLViewController.m in Sources */,
+				EAB9F2AC1955B2FC008141D3 /* SCLPersonDescriptionFormatter.m in Sources */,
 				EAB9F278195093A9008141D3 /* main.m in Sources */,
 				EAB9F27C195093A9008141D3 /* SCLAppDelegate.m in Sources */,
 				EAB9F2A91950A651008141D3 /* SCLPerson.m in Sources */,
@@ -485,6 +497,7 @@
 				EAB9F29F195093AA008141D3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EAB9F2A0195093AA008141D3 /* Build configuration list for PBXNativeTarget "SecondLectureTests" */ = {
 			isa = XCConfigurationList;
@@ -493,6 +506,7 @@
 				EAB9F2A2195093AA008141D3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

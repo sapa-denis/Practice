@@ -7,11 +7,18 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "SCLModel.h"
 
-@interface SCLPerson : NSObject
+@interface SCLPerson : SCLModel
 
 @property (nonatomic, copy) NSString *firstName;
 @property (nonatomic, copy) NSString *lastName;
+@property (nonatomic, readonly) NSString *fullName;
 @property (nonatomic, strong) NSDate *birthDate;
+@property (nonatomic, copy) NSString *email;
+
+
+- (BOOL)isEqualToPerson:(SCLPerson *)person;
+- (BOOL)validateEmail:(inout NSString **)ioValue  error:(out NSError **)outErrorvali;
 
 @end

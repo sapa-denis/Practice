@@ -30,9 +30,7 @@
 - (NSString *)descriptionStringFromPerson:(SCLPerson *)person
 {
 	NSString *formattedBirthDate = [self.dateFormatter stringFromDate:person.birthDate];
-	
 	NSString *personInfo = [NSString stringWithFormat:@"%@\n%@\n%@", person.firstName, person.lastName, formattedBirthDate];
-	
 	return personInfo;
 }
 
