@@ -7,8 +7,22 @@
 //
 
 #import "SCLAppDelegate.h"
+#import "SCLDataProvider+SCLFileUtils.h"
 
 @implementation SCLAppDelegate
+
++ (SCLAppDelegate *)appDelegate
+{
+	return [[UIApplication sharedApplication] delegate];
+}
+
+- (SCLDataProvider *)dataProvider
+{
+	if (!_dataProvider) {
+		_dataProvider = [SCLDataProvider testDataProvider];
+	}
+	return _dataProvider;
+}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {

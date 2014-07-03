@@ -7,9 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SCLDataProvider.h"
 
 @interface SCLAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
+@property (strong, nonatomic) SCLDataProvider *dataProvider;
+
++(SCLAppDelegate *)appDelegate;
 
 @end
