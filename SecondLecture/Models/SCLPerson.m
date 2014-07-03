@@ -25,6 +25,8 @@ typedef NS_ENUM(NSInteger, SCLPersonErrorDomain) {
 @end
 
 
+
+
 @implementation SCLPerson
 
 #pragma mark - NSObject
