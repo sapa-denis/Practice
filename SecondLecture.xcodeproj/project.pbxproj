@@ -10,6 +10,7 @@
 		EA102331196597FC00C1ED11 /* SCLDataProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = EA102330196597FC00C1ED11 /* SCLDataProvider.m */; };
 		EA1023341965A9CE00C1ED11 /* SCLDataProvider+SCLFileUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = EA1023331965A9CE00C1ED11 /* SCLDataProvider+SCLFileUtils.m */; };
 		EA1023371965ADB800C1ED11 /* contacts.plist in Resources */ = {isa = PBXBuildFile; fileRef = EA1023361965ADB800C1ED11 /* contacts.plist */; };
+		EA10233A1965AF9C00C1ED11 /* SCLPersonListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA1023391965AF9C00C1ED11 /* SCLPersonListTableViewController.m */; };
 		EA2A0EB619643932007DE24F /* SCLModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EA2A0EB519643932007DE24F /* SCLModel.m */; };
 		EAB9F26C195093A9008141D3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAB9F26B195093A9008141D3 /* Foundation.framework */; };
 		EAB9F26E195093A9008141D3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAB9F26D195093A9008141D3 /* CoreGraphics.framework */; };
@@ -47,6 +48,8 @@
 		EA1023331965A9CE00C1ED11 /* SCLDataProvider+SCLFileUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SCLDataProvider+SCLFileUtils.m"; sourceTree = "<group>"; };
 		EA1023351965AC3000C1ED11 /* SCLObservable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SCLObservable.h; sourceTree = "<group>"; };
 		EA1023361965ADB800C1ED11 /* contacts.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = contacts.plist; sourceTree = "<group>"; };
+		EA1023381965AF9C00C1ED11 /* SCLPersonListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCLPersonListTableViewController.h; sourceTree = "<group>"; };
+		EA1023391965AF9C00C1ED11 /* SCLPersonListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCLPersonListTableViewController.m; sourceTree = "<group>"; };
 		EA2A0EB419643932007DE24F /* SCLModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCLModel.h; sourceTree = "<group>"; };
 		EA2A0EB519643932007DE24F /* SCLModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCLModel.m; sourceTree = "<group>"; };
 		EAB9F268195093A9008141D3 /* SecondLecture.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SecondLecture.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -137,6 +140,8 @@
 				EAB9F27B195093A9008141D3 /* SCLAppDelegate.m */,
 				EAB9F2AA1955B2FC008141D3 /* SCLPersonDescriptionFormatter.h */,
 				EAB9F2AB1955B2FC008141D3 /* SCLPersonDescriptionFormatter.m */,
+				EA1023381965AF9C00C1ED11 /* SCLPersonListTableViewController.h */,
+				EA1023391965AF9C00C1ED11 /* SCLPersonListTableViewController.m */,
 				EAB9F283195093A9008141D3 /* SCLViewController.h */,
 				EAB9F284195093A9008141D3 /* SCLViewController.m */,
 				EAB9F286195093A9008141D3 /* Images.xcassets */,
@@ -297,6 +302,7 @@
 				EAB9F285195093A9008141D3 /* SCLViewController.m in Sources */,
 				EAB9F2AC1955B2FC008141D3 /* SCLPersonDescriptionFormatter.m in Sources */,
 				EAB9F278195093A9008141D3 /* main.m in Sources */,
+				EA10233A1965AF9C00C1ED11 /* SCLPersonListTableViewController.m in Sources */,
 				EA102331196597FC00C1ED11 /* SCLDataProvider.m in Sources */,
 				EAB9F27C195093A9008141D3 /* SCLAppDelegate.m in Sources */,
 				EA1023341965A9CE00C1ED11 /* SCLDataProvider+SCLFileUtils.m in Sources */,
